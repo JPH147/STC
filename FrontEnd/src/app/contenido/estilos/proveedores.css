@@ -1,0 +1,27 @@
+.boton-opcion2{
+  margin-left: 10px;
+}
+
+.encabezado{
+  background-color: rgb(63,81,181);
+}
+
+.texto-encabezado{
+  color: white;
+  font-size: 15px;
+}
+
+.boton-agregar{
+  float: right;
+  margin-bottom: 10px;
+}
+
+.tabla{
+  clear: both;
+}
+
+.titulo{
+  float: left;
+  margin-bottom: 0px;
+  padding-top: 14px;
+}

@@ -1,0 +1,36 @@
+<mat-card class="tarjeta">
+
+  <h2 class="titulo">{{titulo}}</h2>
+
+  <button mat-fab color="accent" class="boton-agregar"><mat-icon>add</mat-icon></button>
+
+  <mat-table [dataSource]="dataSource" class="tabla">
+
+    <ng-container matColumnDef="ruc">
+      <mat-header-cell *matHeaderCellDef class="texto-encabezado"> RUC </mat-header-cell>
+      <mat-cell *matCellDef="let proveedor"> {{proveedor.ruc}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="razon_social">
+      <mat-header-cell *matHeaderCellDef class="texto-encabezado"> Razón social </mat-header-cell>
+      <mat-cell *matCellDef="let proveedor"> {{proveedor.razon_social}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="observacion">
+      <mat-header-cell *matHeaderCellDef class="texto-encabezado"> Observación </mat-header-cell>
+      <mat-cell *matCellDef="let proveedor"> {{proveedor.observacion}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="opciones">
+      <mat-header-cell *matHeaderCellDef class="texto-encabezado"> Opciones </mat-header-cell>
+      <mat-cell *matCellDef="let proveedor">
+        <button mat-mini-fab color="accent" class="boton-opcion1" (click)="onRowClicked(row)"><mat-icon>edit</mat-icon></button>
+        <button mat-mini-fab color="accent" class="boton-opcion2" (click)="Eliminar(proveedor.id,proveedor)"><mat-icon>delete</mat-icon></button>
+     </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns" class="encabezado"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+</mat-card>

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url(./assets/Ubuntu-R.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./assets/Roboto-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  background-color: #eeeeee;
+}
+
+
+*{
+  font-family:'Ubuntu'
+}

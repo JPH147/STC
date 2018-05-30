@@ -1,0 +1,8 @@
+<h1>{{titulo}}</h1>
+
+
+<ul *ngIf="empresas">
+    <li *ngFor="let empresa of empresas">{{empresa.idempresa}} - {{empresa.ruc}}</li>
+</ul>
+
+<span *ngIf="!empresas">Cargando</span>
