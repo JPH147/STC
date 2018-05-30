@@ -69,7 +69,7 @@ function MetodosDB() {
 
     this.proveedoreliminar = function (datos,respuesta){
       conexion.obtener(function(er,cn){
-        cn.query('update proveedores set activo=0 where idproveedor=?',datos.id, function(error,resultado){
+        cn.query('update proveedores set activo=0 where idproveedor=?',datos.idproveedor, function(error,resultado){
           cn.release();
           if(error){
             respuesta.send({estado:'Error'})
