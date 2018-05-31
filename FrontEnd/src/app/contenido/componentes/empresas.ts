@@ -10,8 +10,7 @@ import {Empresa} from '../modelos/empresa';
 })
 
 export class EmpresasComponente{
-    lista: Empresa[];
-    titulo: string;
+    public titulo: string;
     public empresas;
 
 

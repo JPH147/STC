@@ -11,18 +11,27 @@ import { HttpParams } from '@angular/common/http';
 @Injectable()
 export class ProveedorServicio {
   private url = 'http://localhost:8000/proveedores/';
+  private a: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private _http:Http
+  ) { }
 
   ListadoProveedores(): Observable<Proveedor[]> {
     return this.http.get<Proveedor[]>(this.url);
   }
 
-  EliminarProveedor(id,proveedor:Proveedor){
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+  EliminarProveedor(proveedor:Proveedor){
+    const headers = new HttpHeaders()
+    .set('Content-Type', 'application/json');
     let json = JSON.stringify(proveedor);
-    let params = "json="+json;
-    return this.http.post(this.url+id, params, {headers:headers}).pipe(map(res=>res))
+    return this.http.post(this.url+proveedor.idproveedor, json, {headers:headers}).pipe(map(res=>res))
+  }
+
+  ObtenerProveedor(id){
+    return this._http.get(this.url+id)
+                     .pipe(map(res => res.json()))
   }
 
 }

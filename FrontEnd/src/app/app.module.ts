@@ -50,6 +50,7 @@ import { OrdenrecojoComponente } from './contenido/componentes/orden de recojo';
 import { OrdentrabajoComponente } from './contenido/componentes/orden de trabajo';
 import { PackinlistComponente } from './contenido/componentes/pack in list';
 import { ProveedoresComponente } from './contenido/componentes/proveedores';
+import { ProveedorVerComponente } from './contenido/componentes/proveedor-ver';
 import { RelacionchoferesComponente } from './contenido/componentes/relacion de choferes';
 import { RelacionvehiculosComponente } from './contenido/componentes/relacion de vehiculos';
 import { ReportealmacenesComponente } from './contenido/componentes/reporte de almacenes';
@@ -99,6 +100,7 @@ import { VencimientovehiculosComponente } from './contenido/componentes/vencimie
     OrdentrabajoComponente,
     PackinlistComponente,
     ProveedoresComponente,
+    ProveedorVerComponente,
     RelacionchoferesComponente,
     RelacionvehiculosComponente,
     ReportealmacenesComponente,
