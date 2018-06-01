@@ -24,6 +24,9 @@ import {MatCardModule} from '@angular/material/card';
 import {routing, appRP} from './rutas';
 import { AppComponent } from './app.component';
 
+/* Electron */
+import {NgxElectronModule} from 'ngx-electron';
+
 /* Componentes del sistema */
 import {AlmacenesComponente} from './contenido/componentes/almacenes';
 import { ArticulosComponente } from './contenido/componentes/articulos';
@@ -144,7 +147,8 @@ import { VencimientovehiculosComponente } from './contenido/componentes/vencimie
     CdkTableModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
-    MatCardModule
+    MatCardModule,
+    NgxElectronModule
   ],
   entryComponents: [TreeNested,ProveedoresComponente],
   providers: [

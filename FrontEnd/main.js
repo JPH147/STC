@@ -1,4 +1,5 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require('electron');
+const {ipcMain} = require ('electron')
 
 let win;
 
@@ -40,4 +41,8 @@ app.on('activate', function () {
   if (win === null) {
     createWindow()
   }
+})
+
+ipcMain.on('PruebaComunicacion', (event,arg)=>{
+  event.sender.send('PruebaComunicacion2','Proceso principal')
 })
