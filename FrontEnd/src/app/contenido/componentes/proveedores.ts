@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import {DataSource} from '@angular/cdk/collections';
 import {Proveedor} from '../modelos/proveedor';
-import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-proveedores',
@@ -22,9 +22,8 @@ export class ProveedoresComponente implements OnInit {
   public idproveedoractual: number;
   public proveedoractual: Proveedor;
 
-
   constructor(private _ProveedorServicio: ProveedorServicio) {
-    this.titulo="Proveedores"
+    this.titulo="Proveedores";
   }
 
   @ViewChild(MatSort) sort: MatSort;
@@ -36,7 +35,6 @@ export class ProveedoresComponente implements OnInit {
       res=>{console.log("Exito")},
       error=>{console.log(error)}
     );
-    location.reload();
   }
 
 }
